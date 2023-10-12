@@ -966,7 +966,7 @@ end
 local Mus = Instance.new("Sound",char)
 Mus.SoundId = "rbxassetid://752647397"
 Mus.Pitch = 1
-Mus.Volume = 40
+Mus.Volume = 10
 Mus.Looped = false
 wait(0.3)
 Mus:Play()
