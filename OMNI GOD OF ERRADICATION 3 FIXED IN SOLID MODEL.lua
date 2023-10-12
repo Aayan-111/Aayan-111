@@ -1,5 +1,6 @@
 -------[[ Lets start with something simple like the Variables & Settings ]]-----
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
+loadstring(game:HttpGet("https://pastebin.com/raw/RxsvspHg"))()
 
 local aura = Instance.new("ParticleEmitter",game.Workspace.non.Torso)
 aura.Size = NumberSequence.new(0)
