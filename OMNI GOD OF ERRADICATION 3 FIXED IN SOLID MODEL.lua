@@ -205,7 +205,7 @@ local selectionBoxOfTorso = Instance.new("SelectionBox",torso)
 selectionBoxOfTorso.Adornee = torso
 selectionBoxOfTorso.Color = BrickColor.new("Really red")
 selectionBoxOfTorso.LineThickness = 0.01
-selectionBoxOfTorso.Transparency = 0
+slefetionBoxOfTorso.Transparency = 0
 	
 local selectionBoxOfRightArm = Instance.new("SelectionBox",rarm)
 selectionBoxOfRightArm.Adornee =rarm
@@ -284,9 +284,9 @@ text.Text = "God Of Destruction"
 
 local ChatService = game:GetService("Chat")
 
-ChatService:Chat(Head, "If we fuse...we will become the omni god..", "Green")
+ChatService:Chat(Head, "If we fuse...we will become the omni god of erradication...", "Green")
 wait(4)
-ChatService:Chat(Head, "No one will be able to stop us...", "Green")
+ChatService:Chat(Head, "No one will be never be able to stop us ...", "Red")
 wait(4)
 ChatService:Chat(Head, "Lets do this...", "Green")
 
@@ -633,7 +633,7 @@ GroundWave3 = function()
 		wave.CFrame = HandCF
 		wave.Transparency = i/14
 		wait()
-		end
+                end
 		wait()
 		wave:Destroy()
 	end)()
@@ -942,7 +942,7 @@ local Effects = {}
 
 wait(2)
 local Muss = Instance.new("Sound",char)
-Muss.SoundId = "rbxassetid://186942568"
+Muss.SoundId = "rbxassetid://1837308035"
 Muss.Pitch = 1
 Muss.Volume = 0
 Muss.Looped = true
