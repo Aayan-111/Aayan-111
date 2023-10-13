@@ -3,6 +3,7 @@ Bypass = "death"
 FELOADLIBRARY = {}
 loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
 loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
+loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
 
 print("Move list")
 print("---------")
