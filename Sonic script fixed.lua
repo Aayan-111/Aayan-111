@@ -1,5 +1,4 @@
-loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
-
+loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
 
 print("Move list")
 print("---------")
@@ -9,8 +8,7 @@ print("Q = Left QuickStep, E  = Right QuickStep")
 print("C = Slide, in air to stomp")
 print("Jump Then Hold B near a wall to wallrun")
 print("M to change music, if you're standing still you'll do a special animation!")
-print("Space near a wall to walljump, away from a wall homing attack ok bitch? sorry for calling you but i lwove you >w< 😘")
-
+print("Now enjoy this bitch. owh sorry for calling you that. i lwove you >w< 😘")
 
 wait(0.07)
 Player=game:GetService("Players").LocalPlayer
