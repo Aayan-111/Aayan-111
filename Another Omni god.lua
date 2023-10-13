@@ -1,8 +1,5 @@
 -------[[ Lets start with something simple like the Variables & Settings ]]-----
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
-game.Workspace.non.Humanoid.WalkSpeed = 45
-game.Workspace.non.Humanoid.HipHeight = 7.5
 
 
 local aura = Instance.new("ParticleEmitter",game.Workspace.non.Torso)
