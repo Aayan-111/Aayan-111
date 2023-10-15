@@ -1,5 +1,5 @@
 -------[[ Lets start with something simple like the Variables & Settings ]]-----
-loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
+
 
 
 
