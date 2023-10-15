@@ -1,17 +1,9 @@
 -------[[ Lets start with something simple like the Variables & Settings ]]-----
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
-game.Workspace.non.Humanoid.WalkSpeed = 45
-game.Workspace.non.Humanoid.HipHeight = 7.5
 
 
-local char = game.Players.LocalPlayer.Character
-for i,v in pairs(char:children()) do
-    if v:IsA("Accessory") then
-        v:Destroy()
-    end
-end
-local aura = Instance.new("ParticleEmitter",game.Players.LocalPlayer.Character.Torso)
+
+local aura = Instance.new("ParticleEmitter",game.Workspace.non.Torso)
 aura.Size = NumberSequence.new(0)
 aura.Lifetime = NumberRange.new(0)
 aura.LightEmission = 0
@@ -19,7 +11,7 @@ local jun = game.Players.LocalPlayer
 local Player=game.Players.LocalPlayer
 repeat wait()
 until Player
-local Char=Player.Character
+local Char=game.Workspace.non
 repeat wait()
 until Char
 local CurrentEffects={}
@@ -56,7 +48,7 @@ local attacking=false
 local attacktype=1
 local Portalling=false
 local p = game.Players.LocalPlayer
-local char = p.Character
+local char = game.Workspace.non
 local mouse = p:GetMouse()
 local larm = char["Left Arm"]
 local rarm = char["Right Arm"]
@@ -86,7 +78,7 @@ r=game:service'RunService'.RenderStepped
 
 
 local Transforming = true
-Human.WalkSpeed = 0
+Human.WalkSpeed = 50
 
 
 Player:ClearCharacterAppearance()
@@ -97,8 +89,6 @@ Player.Character["Right Arm"].BrickColor = BrickColor.new("Really black")
 Player.Character["Right Leg"].BrickColor = BrickColor.new("Really black")
 Player.Character["Left Leg"].BrickColor = BrickColor.new("Really black")
 Player.Character["Left Arm"].BrickColor = BrickColor.new("Really black")
-Player.Character.Head.face:Destroy()
-
 
 
 
@@ -144,71 +134,72 @@ LightOnBody.Color = Color3.new(0, 225, 0)
 
 
 local p = game.Players.LocalPlayer
-local char = p.Character
-GodOfDestruction = Instance.new("Model",game.Players.LocalPlayer.Character.Torso)
+local char = game.Workspace.non
+GodOfDestruction = Instance.new("Model",game.Workspace.non.Torso)
 GodOfDestruction.Name = "GodOfDestruction"
-humanoid = Instance.new("Humanoid",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
-shirt = Instance.new("Shirt",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+humanoid = Instance.new("Humanoid",game.Workspace.non.Torso.GodOfDestruction)
+shirt = Instance.new("Shirt",game.Workspace.non.Torso.GodOfDestruction)
 shirt.Name = "Shirt"
-pants = Instance.new("Pants",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+pants = Instance.new("Pants",game.Workspace.non.Torso.GodOfDestruction)
 pants.Name = "Pants"
-torso = Instance.new("Part",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+torso = Instance.new("Part",game.Workspace.non.Torso.GodOfDestruction)
 torso.Size = Vector3.new(2,2,1)
 torso.Rotation = Vector3.new(0,180,0)
 torso.Position = Vector3.new(0,4,0)
 torso.BrickColor = BrickColor.new("Really black")
 torso.Name = "Torso"
-head = Instance.new("Part",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+head = Instance.new("Part",game.Workspace.non.Torso.GodOfDestruction)
 head.Size = Vector3.new(1.25,1.25,1.25)
 head.BrickColor = BrickColor.new("Really black")
 head.Name = "Head"
 head.Position = Vector3.new(0,6,0)
 headmesh = Instance.new("SpecialMesh",head)
 headmesh.MeshType = "Head"
-larm = Instance.new("Part",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+larm = Instance.new("Part",game.Workspace.non.Torso.GodOfDestruction)
 larm.Size = Vector3.new(1,2,1)
 larm.BrickColor = BrickColor.new("Really black")
 larm.Name = "Left Arm"
 larm.Position = Vector3.new(-2,4,0)
-rarm = Instance.new("Part",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+rarm = Instance.new("Part",game.Workspace.non.Torso.GodOfDestruction)
 rarm.Size = Vector3.new(1,2,1)
 rarm.BrickColor = BrickColor.new("Really black")
 rarm.Name = "Right Arm"
 rarm.Position = Vector3.new(2,4,0)
-lleg = Instance.new("Part",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+lleg = Instance.new("Part",game.Workspace.non.Torso.GodOfDestruction)
 lleg.Size = Vector3.new(1,2,1)
 lleg.Name = "Left Leg"
 lleg.Position = Vector3.new(1,2,0)
 lleg.BrickColor = BrickColor.new("Really black")
-rleg = Instance.new("Part",game.Players.LocalPlayer.Character.Torso.GodOfDestruction)
+rleg = Instance.new("Part",game.Workspace.non.Torso.GodOfDestruction)
 rleg.Size = Vector3.new(1,2,1)
 rleg.Name = "Right Leg"
 rleg.Position = Vector3.new(-1,2,0)
 rleg.BrickColor = BrickColor.new("Really black")
-headweld = Instance.new("Weld",game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Head)
-headweld.Part0 = game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Head
+headweld = Instance.new("Weld",game.Workspace.non.Torso.GodOfDestruction.Head)
+headweld.Part0 = game.Workspace.non.Torso.GodOfDestruction.Head
 headweld.Part1 = torso
 headweld.C0 = CFrame.new(0, -1.5, 0)
-larmweld = Instance.new("Weld",game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso)
-larmweld.Part0 = game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso
+larmweld = Instance.new("Weld",game.Workspace.non.Torso.GodOfDestruction.Torso)
+larmweld.Part0 = game.Workspace.non.Torso.GodOfDestruction.Torso
 larmweld.Part1 = larm
 larmweld.C0 = CFrame.new(1.5, 0, 0)
-rarmweld = Instance.new("Weld",game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso)
-rarmweld.Part0 = game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso
+rarmweld = Instance.new("Weld",game.Workspace.non.Torso.GodOfDestruction.Torso)
+rarmweld.Part0 = game.Workspace.non.Torso.GodOfDestruction.Torso
 rarmweld.Part1 = rarm
 rarmweld.C0 = CFrame.new(-1.5, 0, 0)
-rlegweld = Instance.new("Weld",game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso)
-rlegweld.Part0 = game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso
+rlegweld = Instance.new("Weld",game.Workspace.non.Torso.GodOfDestruction.Torso)
+rlegweld.Part0 = game.Workspace.non.Torso.GodOfDestruction.Torso
 rlegweld.Part1 = rleg
 rlegweld.C0 = CFrame.new(-0.5, -2, 0)
-llegweld = Instance.new("Weld",game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso)
-llegweld.Part0 = game.Players.LocalPlayer.Character.Torso.GodOfDestruction.Torso
+llegweld = Instance.new("Weld",game.Workspace.non.Torso.GodOfDestruction.Torso)
+llegweld.Part0 = game.Workspace.non.Torso.GodOfDestruction.Torso
 llegweld.Part1 = lleg
 llegweld.C0 = CFrame.new(0.5, -2, 0)
-npctoplayer = Instance.new("Weld",game.Players.LocalPlayer.Character.Torso)
-npctoplayer.Part0 = game.Players.LocalPlayer.Character.Torso
+npctoplayer = Instance.new("Weld",game.Workspace.non.Torso)
+npctoplayer.Part0 = game.Workspace.non.Torso
 npctoplayer.Part1 = torso
 npctoplayer.C0 = CFrame.new(0, 0, -10) * CFrame.Angles(math.rad(0), math.rad(180), math.rad(0))
+
 
 
 local selectionBoxOfTorso = Instance.new("SelectionBox",torso)
@@ -307,10 +298,10 @@ for i=1,10 do
 	close = close + 1
 	npctoplayer.C0 = CFrame.new(0, 0, close) * CFrame.Angles(math.rad(0), math.rad(180), math.rad(0))
 end
-game.Players.LocalPlayer.Character.Torso.GodOfDestruction:Destroy()
+game.Workspace.non.Torso.GodOfDestruction:Destroy()
 wait(0.1)
 local p = game.Players.LocalPlayer
-local char = p.Character
+local char = game.Workspace.non
 local mouse = p:GetMouse()
 local larm = char["Left Arm"]
 local rarm = char["Right Arm"]
@@ -1175,13 +1166,6 @@ ROW = function(out, trans, s, wt, t, ang, plus)
 						c.TopSurface = 0
 						c.BottomSurface = 0
 						c.Size = s
-						c.Anchored = true
-						c.CanCollide = wt
-						c.Material=workspace.Base.Material
-						c.Transparency = trans
-						c.BrickColor = workspace.Base.BrickColor
-						c.CFrame = CFrame.new(Torso.CFrame.x,0,Torso.CFrame.z) * CFrame.Angles(0, math.rad(i +  plus), 0) *     CFrame.new(0, 0, out) * ang
-						c.Locked=true
 						game.Debris:AddItem(c,15)
 					end
 end
@@ -1254,7 +1238,7 @@ ROW(12, 0, Vector3.new(34.5, 30, 3), true, 8, CFrame.Angles(math.rad(math.random
         wave2:Destroy()
 end)()
 
-local torso = game.Players.LocalPlayer.Character.Torso
+local torso = game.Workspace.non.Torso
 local block = Instance.new("Part",torso)
 block.Size = Vector3.new(0.1,0.1,0.1)
 block.Position = block.Position + Vector3.new(2,2,2)
@@ -1265,7 +1249,7 @@ weld.Part1 = block
 weld.C0 = CFrame.new(0,5,0)
 local tables = {5,4,3,2,1}
 local part = Instance.new("ParticleEmitter")
-part.Parent = game.Players.LocalPlayer.Character.Torso
+part.Parent = game.Workspace.non.Torso
 part.LockedToPart = true
 
 part.Texture = "rbxassetid://300899196"
@@ -1316,7 +1300,7 @@ end
 
 end
 
-hum.WalkSpeed = 16
+hum.WalkSpeed = 45
 Muss.Volume = 8
 
 
@@ -1518,9 +1502,9 @@ local forward, side = 0, 0
 local lastForward, lastSide = 0, 0
 
 local floatBP = Instance.new("BodyPosition")
-floatBP.maxForce = Vector3.new(0, math.huge, 0)
+floatBP.maxForce = Vector3.new(0, 0, 0)
 local flyBV = Instance.new("BodyVelocity")
-flyBV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+flyBV.maxForce = Vector3.new(0, 0, 0)
 local turnBG = Instance.new("BodyGyro")
 turnBG.maxTorque = Vector3.new(math.huge, math.huge, math.huge)
 
@@ -1609,7 +1593,7 @@ end)
 
 mouse.KeyDown:connect(function(key)
   if key == "b" then
-    hum.WalkSpeed = 0
+    hum.WalkSpeed = 50
     if Debounces.CanAttack == true then
       Debounces.CanAttack = false
       Debounces.NoIdl = true
@@ -1806,7 +1790,7 @@ end))
       end
       wait(1.4)
       Debounces.NoIdl = false
-      hum.WalkSpeed = 5
+      hum.WalkSpeed = 50
       Debounces.on = false
       wait()
       if Debounces.CanAttack == false then
@@ -1995,7 +1979,7 @@ Damagefunc = function(Part, hit, minim, maxim, knockback, Type, Property, Delay,
   end
 ), hum)
       local angle = hit.Position - (Property.Position + Vector3.new(0, 0, 0)).unit
-      local bodvol = Create("BodyVelocity")({velocity = angle * knockback, P = 5000, maxForce = Vector3.new(8000, 8000, 8000), Parent = hit})
+      local bodvol = Create("BodyVelocity")({velocity = angle * knockback, P = 0, maxForce = Vector3.new(0, 0, 0), Parent = hit})
       local rl = Create("BodyAngularVelocity")({P = 3000, maxTorque = Vector3.new(500000, 500000, 500000) * 50000000000000, angularvelocity = Vector3.new(math.random(-10, 10), math.random(-10, 10), math.random(-10, 10)), Parent = hit})
       game:GetService("Debris"):AddItem(bodvol, 0.5)
       game:GetService("Debris"):AddItem(rl, 0.5)
@@ -2005,7 +1989,7 @@ Damagefunc = function(Part, hit, minim, maxim, knockback, Type, Property, Delay,
             print'hi'
         else
           if Type == "Up" then
-            local bodyVelocity = Create("BodyVelocity")({velocity = vt(0, 20, 0), P = 5000, maxForce = Vector3.new(8000, 8000, 8000), Parent = hit})
+            local bodyVelocity = Create("BodyVelocity")({velocity = vt(0, 20, 0), P = 5000, maxForce = Vector3.new(0, 0, 0), Parent = hit})
             game:GetService("Debris"):AddItem(bodyVelocity, 0.5)
           else
             do
@@ -2017,17 +2001,17 @@ Damagefunc = function(Part, hit, minim, maxim, knockback, Type, Property, Delay,
     end
   end
 ))
-                local bodyVelocity = Create("BodyVelocity")({velocity = vt(0, 20, 0), P = 5000, maxForce = Vector3.new(8000, 8000, 8000), Parent = hit})
+                local bodyVelocity = Create("BodyVelocity")({velocity = vt(0, 20, 0), P = 5000, maxForce = Vector3.new(0, 0, 0), Parent = hit})
                 game:GetService("Debris"):AddItem(bodyVelocity, 1)
               else
                 do
                   if Type == "Snare" then
-                    local bp = Create("BodyPosition")({P = 2000, D = 100, maxForce = Vector3.new(math.huge, math.huge, math.huge), position = hit.Parent.Torso.Position, Parent = hit.Parent.Torso})
+                    local bp = Create("BodyPosition")({P = 2000, D = 100, maxForce = Vector3.new(0, 0, 0), position = hit.Parent.Torso.Position, Parent = hit.Parent.Torso})
                     game:GetService("Debris"):AddItem(bp, 1)
                   else
                     do
                       if Type == "Freeze" then
-                        local BodPos = Create("BodyPosition")({P = 50000, D = 1000, maxForce = Vector3.new(math.huge, math.huge, math.huge), position = hit.Parent.Torso.Position, Parent = hit.Parent.Torso})
+                        local BodPos = Create("BodyPosition")({P = 50000, D = 1000, maxForce = Vector3.new(0, 0, 0), position = hit.Parent.Torso.Position, Parent = hit.Parent.Torso})
                         local BodGy = Create("BodyGyro")({maxTorque = Vector3.new(400000, 400000, 400000) * math.huge, P = 20000, Parent = hit.Parent.Torso, cframe = hit.Parent.Torso.CFrame})
                         hit.Parent.Torso.Anchored = true
                         coroutine.resume(coroutine.create(function(Part)
@@ -2195,7 +2179,7 @@ spart.Anchored = true
 spart.CanCollide = false
 spart.CFrame = shur.CFrame + vt(0,2.5,0)
 local expld = Instance.new("Explosion", spart)
-expld.BlastRadius = 27.5
+expld.BlastRadius = 0
 expld.Position = spart.Position
 local mesh = Instance.new("SpecialMesh",spart)
 mesh.MeshType = "FileMesh"
@@ -2325,7 +2309,7 @@ spart.Anchored = true
 spart.CanCollide = false
 spart.CFrame = mouse.Hit
 local expld = Instance.new("Explosion", spart)
-expld.BlastRadius = 500000
+expld.BlastRadius = 0
 expld.Position = spart.Position
 local mesh = Instance.new("SpecialMesh",spart)
 mesh.MeshType = "FileMesh"
@@ -2411,7 +2395,7 @@ trail.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0,0,0),Numbe
 trail.Speed = NumberRange.new(0,0)
 trail.RotSpeed = NumberRange.new(-500,500)
   local bv = Instance.new("BodyVelocity")
-  bv.maxForce = Vector3.new(1e9, 1e9, 1e9)
+  bv.maxForce = Vector3.new(0, 0, 0)
   bv.velocity = mouse.Hit.lookVector *100
   bv.Parent = lb
   wait(0.1)
@@ -2425,7 +2409,7 @@ hitted = true
 trail.Rate = 0
 lb.Anchored = true
 local explosion = Instance.new("Explosion",lb)
-explosion.BlastRadius = 10
+explosion.BlastRadius = 0
 explosion.Position = lb.Position
 local ex = Instance.new("ParticleEmitter",lb)
 ex.Texture = "rbxassetid://296874871"
@@ -2848,7 +2832,7 @@ mouse.KeyDown:connect(function(key)
 			Debounces.CanAttack = false
 			Debounces.NoIdl = true
 			Debounces.on = true
-			game:GetService("Chat"):Chat(game.Players.LocalPlayer.Character,"Here is all of my energy","Red")
+			game:GetService("Chat"):Chat(game.Workspace.non,"Here is all of my energy","Red")
 			function FindNearestTorso(Position,Distance,SinglePlayer)
 				if SinglePlayer then return(SinglePlayer.Torso.CFrame.p -Position).magnitude < Distance end
 					local List = {}
@@ -2959,7 +2943,7 @@ mouse.KeyDown:connect(function(key)
 	end
 	sp:Destroy()
 	sp2:Destroy()
-game:GetService("Chat"):Chat(game.Players.LocalPlayer.Character,"TAKE THIS!","Red")
+game:GetService("Chat"):Chat(game.Workspace.non,"TAKE THIS!","Red")
 	local X = Instance.new("Part",char)
 	local O = Instance.new("ObjectValue",X)
 	O.Name = "creator"
@@ -2983,7 +2967,7 @@ game:GetService("Chat"):Chat(game.Players.LocalPlayer.Character,"TAKE THIS!","Re
 	Z.Scale = Vector3.new(100,100,100)
 	X.CFrame = rarm.CFrame*CFrame.new(15,15,15)
 	local bv = Instance.new("BodyVelocity",X)
-	bv.maxForce = Vector3.new(99999,99999,99999)
+	bv.maxForce = Vector3.new(0,0,0)
 	X.CFrame = CFrame.new(X.Position,mouse.Hit.p)
 	bv.velocity = X.CFrame.lookVector*65
 
@@ -3460,11 +3444,11 @@ ROW2(18, 0, Vector3.new(34.5, 70, 3), true, 8, CFrame.Angles(math.rad(math.rando
   local clastframe = lastframe
   BodyVel.velocity = Vector3.new()
   local CPlane = MousePlane()
-  BodyVel.maxForce = Vector3.new(1000000, 1000000, 1000000)
+  BodyVel.maxForce = Vector3.new(0, 0, 0)
   vPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(vPlayer.Character.HumanoidRootPart.Position, vPlayer.Character.HumanoidRootPart.Position + CPlane * 50)
   BodyGyro.cframe = CFrame.new(vPlayer.Character.HumanoidRootPart.CFrame.p, vPlayer.Character.HumanoidRootPart.CFrame.p + CPlane * 50)
   local cl = 0
-  DesiredWalkspeed = 0
+  DesiredWalkspeed = 50
   p = Instance.new("Sound", vPlayer.Character.Torso)
   p.Volume = 0.8
   p.Pitch = 1
@@ -3795,7 +3779,7 @@ ROW2(18, 0, Vector3.new(34.5, 70, 3), true, 8, CFrame.Angles(math.rad(math.rando
     gpos.Parent = vPlayer.Character.HumanoidRootPart
     gpos.P = 5000
     gpos.D = 600
-    gpos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+    gpos.maxForce = Vector3.new(0, 0, 0)
     gpos.position = vPlayer.Character.HumanoidRootPart.Position
     coroutine.resume(coroutine.create(function(NNoob)
     nubgyro = nil
@@ -3827,7 +3811,7 @@ ROW2(18, 0, Vector3.new(34.5, 70, 3), true, 8, CFrame.Angles(math.rad(math.rando
         nubpos.Parent = NNoob.Torso
         nubpos.P = 8000
         nubpos.D = 200
-        nubpos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+        nubpos.maxForce = Vector3.new(0, 0, 0)
         nubpos.position = vPlayer.Character["Left Arm"].CFrame * CFrame.new(0, -1.6, 0).p
       else
         if nubgyro.Parent == nil then
@@ -4178,7 +4162,7 @@ ROW2(18, 0, Vector3.new(34.5, 70, 3), true, 8, CFrame.Angles(math.rad(math.rando
     p:Stop()
   end), pb)
         clastframe = lastframe
-        BodyVel.maxForce = Vector3.new(1000000, 0, 1000000)
+        BodyVel.maxForce = Vector3.new(0, 0, 0)
         for i = 1, 15 do
           fwait()
           BodyVel.velocity = BodyVel.velocity / 1.2
