@@ -1,5 +1,24 @@
--------[[ Lets start with something simple like the Variables & Settings ]]-----
+-------[[ Lets change The settings to FE so it can work normally (its true) ]]-----
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)() 
+local function FindInstance(Parent, ClassName, Name)
+	for _, Instance in pairs(Parent:GetChildren()) do
+		if Instance:IsA(ClassName) and Instance.Name == Name then
+			return Instance
+		end
+	end
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title =  "Omni god of erradication Fixed by Doritosman2437";
+	Text = "Thanks for using my script bro!!!1";
+	Icon = "rbxthumb://type=Asset&id=178993746&w=150&h=150"})
+Duration = 3;
+game.Workspace.FilteringEnabled = true
+local EnableFling = true
+local ClickToFling = false
+local FlingOnTouchh = true
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-FE-Netless-Script-1161"))()
+print("Reanimate , netless and FE Has Been Enabled!")
 
 local char = game.Players.LocalPlayer.Character
 for i,v in pairs(char:children()) do
