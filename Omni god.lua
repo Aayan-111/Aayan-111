@@ -16,7 +16,7 @@ Duration = 3;
 game.Workspace.FilteringEnabled = true
 local EnableFling = true
 local ClickToFling = false
-local FlingOnTouchh = true
+local FlingOnTouch = true
 loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-FE-Netless-Script-1161"))()
 print("Reanimate , netless and FE Has Been Enabled!")
 
