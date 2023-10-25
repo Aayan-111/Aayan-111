@@ -1,8 +1,7 @@
 -------[[ Lets change The settings to FE so it can work normally (its true). ]]-------
 loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)() 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekReanimate/main/Main.lua"))()
 
--------[[ I use Gelatek Reanimate so the script's anim wont break or wont work without reanim. ]]-------
+-------[[ holy shit is that freddy fazbear? har har har har har🐻🐻 "bites of 87"]]-------
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title =  "Omni god of erradication Fixed";
@@ -15,8 +14,9 @@ local ClickToFling = false
 local FlingOnTouch = true
 local CanKill = true
 loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-FE-Netless-Script-1161"))()
-print("Reanimate , netless and FE Has Been Enabled! also those notifs are the scripts i added :)")
+print("local ran, netless and FE Has Been Enabled! also those notifs are the scripts i added :)")
 warn("plz dont abuse woth the script ok thank you :) also fixed by aayan6212 on discord!!1")
+warn("Script loaded in 0.19477720 seconds!")
 
 local char = game.Players.LocalPlayer.Character
 for i,v in pairs(char:children()) do
