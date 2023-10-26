@@ -1,9 +1,6 @@
---[[KillerDarkness0105's/Codex's Sonic script]]--
-Bypass = "death"
-FELOADLIBRARY = {}
 loadstring(game:GetObjects("rbxassetid://5209815302")[1].Source)()
-loadstring(game:GetObjects("rbxassetid://5325226148")[1].Source)()
-loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Reanimation.lua"))()
 
 print("Move list")
 print("---------")
@@ -77,7 +74,7 @@ local Create = FELOADLIBRARY.Create
 deb = game:GetService("Debris")
 Face.Transparency = 0
 --Face.Texture = "rbxassetid://176217905" --176217905
-Humanoid.WalkSpeed = 64
+Humanoid.WalkSpeed = 999999999999999999999999999999999999999999999999 
 local freefall = 0
 local headsunsound = RootPart:FindFirstChild("Running") or Instance.new("Sound",RootPart)
 headsunsound.SoundId = "rbxassetid://758199523"
@@ -94,8 +91,8 @@ local dir = Vector3.new(RootPart.Velocity.x,0,RootPart.Velocity.z).unit
 		music = Instance.new("Sound",RootPart)
 		music.Volume = 1
 		music.TimePosition = 0
-		music.Pitch = 1
-		music.SoundId = "rbxassetid://1251555494"
+		music.Pitch = 0.85 
+		music.SoundId = "rbxassetid://9048375035"
 		music.Looped = true
 		music:Play()
 		
