@@ -74,7 +74,7 @@ local Create = FELOADLIBRARY.Create
 deb = game:GetService("Debris")
 Face.Transparency = 0
 --Face.Texture = "rbxassetid://176217905" --176217905
-Humanoid.WalkSpeed = 999999999
+Humanoid.WalkSpeed = 64
 local freefall = 0
 local headsunsound = RootPart:FindFirstChild("Running") or Instance.new("Sound",RootPart)
 headsunsound.SoundId = "rbxassetid://758199523"
@@ -91,8 +91,8 @@ local dir = Vector3.new(RootPart.Velocity.x,0,RootPart.Velocity.z).unit
 		music = Instance.new("Sound",RootPart)
 		music.Volume = 1
 		music.TimePosition = 0
-		music.Pitch = 0.85 
-		music.SoundId = "rbxassetid://9048375035"
+		music.Pitch = 1
+		music.SoundId = "rbxassetid://1251555494"
 		music.Looped = true
 		music:Play()
 		
@@ -743,7 +743,7 @@ coroutine.resume(coroutine.create(function()
         Humanoid.CameraOffset = Humanoid.CameraOffset:lerp(Vector3.new(math.random(-0.35*1.8,0.35*1.8),math.random(-0.35*1.8,0.35*1.8),math.random(-0.35*1.8,0.35*1.8)),0.24)
 end
 end))
-        Humanoid.WalkSpeed = 180
+        Humanoid.WalkSpeed = 99999999 
         RootPart.Velocity = RootPart.CFrame.lookVector*150
         RingEffect(BrickColor.new("Cyan"), RootPart.CFrame*CFrame.new(0,0,-9.2) , 1, 1, 1, 8, 8, 8, 0.14,"Neon") 
         boost = true
@@ -754,7 +754,7 @@ end)
 mouse.KeyUp:connect(function(key)
     if string.byte(key) == 48 then
 		Swing = 1
-        Humanoid.WalkSpeed = 64
+        Humanoid.WalkSpeed = 9999999 
         boost = false
         boostsound:Stop()
 
@@ -777,7 +777,7 @@ coroutine.resume(coroutine.create(function()
 end
 end))
 		
-        Humanoid.WalkSpeed = 320
+        Humanoid.WalkSpeed = 999999999 
         RootPart.Velocity = RootPart.CFrame.lookVector*550
         RingEffect(BrickColor.new("Cyan"), RootPart.CFrame*CFrame.new(0,0,-9.2) , 1, 1, 1, 18, 18, 18, 0.14,"Neon") 
         RingEffect(BrickColor.new("White"), RootPart.CFrame*CFrame.new(0,0,-11.2) , 1, 1, 1, 18, 18, 18, 0.14,"Neon") 
