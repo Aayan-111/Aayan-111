@@ -93,12 +93,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title =  "Omni god of erradication Fixed";
 	Text = "Thanks for using my script bro!!!1";
 	Icon = "rbxthumb://type=Asset&id=idk what to put in decal :/&w=150&h=150"})
-Duration = 3;
-game.Workspace.FilteringEnabled = true
-local EnableFling = true
-local ClickToFling = false
-local FlingOnTouch = true
-local CanKill = true 
+Duration = 3; 
 
 
 local char = game.Players.LocalPlayer.Character
