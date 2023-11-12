@@ -220,7 +220,7 @@ selectionBoxOfLeftLeg.Transparency = 0
 
 
 LightOnBody = Instance.new("PointLight", Head)
-LightOnBody.Brightness = 3000
+LightOnBody.Brightness = 1
 LightOnBody.Range = 20
 LightOnBody.Color = Color3.new(0, 225, 0)
 
@@ -326,7 +326,7 @@ selectionBoxOfLeftLeg.Transparency = 0
 
 
 LightOnBody = Instance.new("PointLight", head)
-LightOnBody.Brightness = 3000
+LightOnBody.Brightness = 1
 LightOnBody.Range = 20
 LightOnBody.Color = Color3.new(225, 0, 0)
 
