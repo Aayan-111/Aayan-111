@@ -96,12 +96,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 Duration = 3; 
 
 
-local char = game.Players.LocalPlayer.Character
-for i,v in pairs(char:children()) do
-    if v:IsA("Accessory") then
-        v:Destroy()
-    end
-end
+
 local aura = Instance.new("ParticleEmitter",game.Players.LocalPlayer.Character.Torso)
 aura.Size = NumberSequence.new(0)
 aura.Lifetime = NumberRange.new(0)
