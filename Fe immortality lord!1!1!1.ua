@@ -48,7 +48,7 @@ if not isfile(OmgSkidd) then
 	    Text = "ok last one";
 	    Icon = "rbxthumb://type=Asset&id=1030775394&w=150&h=150"})
     Duration = 7
-    writefile(OmgSkidd, game:HttpGet("https://drive.google.com/file/d/1Btif8qGMz_XCUXKQHWWVQRdy4eVFm51e"))
+    writefile(OmgSkidd, game:HttpGet("https://drive.google.com/uc?export=download&id=18-UhMz_GiovOqIWDJPfaILjNhOXJqZin"))
 end
 game.Players.LocalPlayer.Character["International Fedora"].Name = "International Fedora2"
 --[[$=`{}`{`=$[©∆/
