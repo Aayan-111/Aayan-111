@@ -674,7 +674,7 @@ end)
 
 -- Objects
 
-local Chill_Gui_Bro = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local Chill_Gui_Bro = Instance.new("ScreenGui", game.Players.Doritosman2437.PlayerGui)
 local Header = Instance.new("Frame")
 local BackGround = Instance.new("Frame")
 local Chill_Gui_Label = Instance.new("TextLabel")
