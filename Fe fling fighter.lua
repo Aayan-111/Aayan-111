@@ -1,12 +1,3 @@
-loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
-
---[[ Options ]]--
-_G.CharacterBug = false --Set to true if your uppertorso floats when you use the script with R15.
-_G.GodMode = true --Set to true if you want godmode.
-_G.R6 = true --Set to true if you wanna enable R15 to R6 when your R15.
---[[Reanimate]]--
-loadstring(game:HttpGet("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/fc29cbf0eda6f8b129778b441be3128f/raw/6StQ2n56PnEHMhQ9"))()
- 
 function LoadLibrary(a)
 local t = {}
  
