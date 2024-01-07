@@ -54,7 +54,6 @@ local Effects = {}
  attackspeed = 0.14 
  df = false
  Swing = 1
-local change = 1
 local val = 0
 local speed = 0
 local rs = game:GetService("RunService").RenderStepped
@@ -1492,7 +1491,6 @@ local look = 0
 
 				while true do
     swait()
-sine = sine + change
 --speed = speed + music.PlaybackLoudness/90
 local torvel=(RootPart.Velocity*Vector3.new(1,0,1)).magnitude
 local velderp=RootPart.Velocity.y
