@@ -1,6 +1,3 @@
-loadstring(game:GetObjects("rbxassetid://5425999987")[1].Source)()
-
-local char = game.Workspace.non
 --//Lol try to figure this one out//
 function rainb(hue)
     local section = hue % 1 * 3
@@ -14,8 +11,8 @@ function rainb(hue)
     end
 end
 
-local Chillmusic = Instance.new("Sound", char)
-Chillmusic.Parent = char
+Chillmusic = Instance.new("Sound", workspace)
+Chillmusic.Parent = game.Chat
 Chillmusic.Volume = 8
 Chillmusic.SoundId = "rbxassetid://1221694420"
 Chillmusic.Looped = true
@@ -24,7 +21,9 @@ Chillmusic:Play()
 local txt = Instance.new("BillboardGui", char)
 txt.Adornee = char.Head
 txt.Name = "_status"
-txt.Size = UDim2.new(2, 0, 1.2, 
+txt.Size = UDim2.new(2, 0, 1.2, 0)
+txt.StudsOffset = Vector3.new(-9, 8, 0)
+local text = Instance.new("TextLabel", txt)
 text.Size = UDim2.new(10, 0, 7, 0)
 text.FontSize = "Size24"
 text.TextScaled = true
@@ -34,9 +33,9 @@ text.TextTransparency = 0
 text.TextStrokeTransparency = 0
 text.Font = "Arcade"
 text.TextStrokeColor3 = Color3.new(0, 0, 0)
-local v = Instance.new("Part")
+v = Instance.new("Part")
 v.Name = "ColorBrick"
-v.Parent = char
+v.Parent = m.Character
 v.FormFactor = "Symmetric"
 v.Anchored = true
 v.CanCollide = false
@@ -58,51 +57,52 @@ while wait(2) do
 end
 end)
 v.Shape = "Block"
-text.Text = "~»Chill Af«~"
-local Player = game:GetService("Players").LocalPlayer
-local Character = game.Workspace.non
-local PlayerGui = Player.PlayerGui
-local Backpack = Player.Backpack
-local Torso = Character.Torso
-local Head = Character.Head
-local Humanoid = Character.Humanoid
-local m = Instance.new("Model", Character)
-local LeftArm = Character["Left Arm"]
-local LeftLeg = Character["Left Leg"]
-local RightArm = Character["Right Arm"]
-local RightLeg = Character["Right Leg"]
-local LS = Torso["Left Shoulder"]
-local LH = Torso["Left Hip"]
-local RS = Torso["Right Shoulder"]
-local RH = Torso["Right Hip"]
-local Face = Head.face
-local Neck = Torso.Neck
-local it = Instance.new
-local attacktype = 1
-local vt = Vector3.new
-local cf = CFrame.new
-local bc = BrickColor.new
-local br = BrickColor.random
-local it = Instance.new
-local euler = CFrame.fromEulerAnglesXYZ
-local angles = CFrame.Angles
-local cloaked = false
-local necko = cf(0, 1, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
-local necko2 = cf(0, -0.5, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
-local LHC0 = cf(-1, -1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-local LHC1 = cf(-0.5, 1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-local RHC0 = cf(1, -1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
-local RHC1 = cf(0.5, 1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
-local RootPart = Character.HumanoidRootPart
-local RootJoint = RootPart.RootJoint
-local RootCF = euler(-1.57, 0, 3.14)
-local attack = false
-local attackdebounce = false
-local equipped = false
-local trispeed = 0.2
-local attackmode = "none"
+text.Text = "~»Chill«~"
+Player = owner
+Character = Player.Character
+PlayerGui = Player.PlayerGui
+Backpack = Player.Backpack
+Torso = Character.Torso
+Head = Character.Head
+Humanoid = Character.Humanoid
+m = Instance.new("Model", Character)
+LeftArm = Character["Left Arm"]
+LeftLeg = Character["Left Leg"]
+RightArm = Character["Right Arm"]
+RightLeg = Character["Right Leg"]
+LS = Torso["Left Shoulder"]
+LH = Torso["Left Hip"]
+RS = Torso["Right Shoulder"]
+RH = Torso["Right Hip"]
+Face = Head.face
+Neck = Torso.Neck
+it = Instance.new
+attacktype = 1
+vt = Vector3.new
+cf = CFrame.new
+bc = BrickColor.new
+br = BrickColor.random
+it = Instance.new
+euler = CFrame.fromEulerAnglesXYZ
+angles = CFrame.Angles
+cloaked = false
+necko = cf(0, 1, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+necko2 = cf(0, -0.5, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+LHC0 = cf(-1, -1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+LHC1 = cf(-0.5, 1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+RHC0 = cf(1, -1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+RHC1 = cf(0.5, 1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+RootPart = Character.HumanoidRootPart
+RootJoint = RootPart.RootJoint
+RootCF = euler(-1.57, 0, 3.14)
+attack = false
+attackdebounce = false
+equipped = false
+trispeed = 0.2
+attackmode = "none"
 local idle = 0
 local Anim = "Idle"
+Head.face.Texture = "rbxassetid://206844132"
 
 local Trail = Instance.new("Trail",char)
 local attachment0 = Instance.new("Attachment",char["Right Arm"])
@@ -156,6 +156,9 @@ Trail.Lifetime = 0.5
 Trail.Attachment0 = attachment0
 Trail.Attachment1 = attachment1
 
+
+Humanoid.Animator.Parent = nil
+Character.Animate.Parent = nil
 function FindNearestTorso(Position, Distance, SinglePlayer)
 	if SinglePlayer then
 		return Distance > (SinglePlayer.Torso.CFrame.p - Position).magnitude
@@ -385,9 +388,8 @@ newWeld(Torso, LeftLeg, -0.5, -1, 0)
 LeftLeg.Weld.C1 = CFrame.new(0, 1, 0)
 newWeld(Torso, RightLeg, 0.5, -1, 0)
 RightLeg.Weld.C1 = CFrame.new(0, 1, 0)
-Player = game:GetService("Players").LocalPlayer
-Character = char
-mouse = Player:GetMouse()
+Player = owner
+Character = Player.Character
 m = Instance.new("Model", Character)
 local weldBetween = function(a, b)
 	local weldd = Instance.new("ManualWeld")
@@ -463,7 +465,7 @@ mouse.KeyDown:connect(function(key)
 		wait(3)
 		text.Text = "But some people cant handle the chill can they."
 		wait(3)
-		text.Text = "Chill Af"
+		text.Text = "Chill"
 	end
 end)
 mouse.KeyDown:connect(function(key)
@@ -482,14 +484,14 @@ mouse.KeyDown:connect(function(key)
 	if key == "b" then
 		text.Text = "Be back scrubs."
 		wait(1)
-		text.Text = "Afk nibba..."
+		text.Text = "Afk n... why would i say a racist word :skull:"
 	end
 end)
 mouse.KeyDown:connect(function(key)
 	if key == "n" then
 		text.Text = "K back you nubs's!"
 		wait(1)
-		text.Text = "Chill Af"
+		text.Text = "Chill"
 	end
 end)
 m = Instance.new("ForceField", Character)
@@ -571,7 +573,7 @@ end)
 
 -- Objects
 
-local Chill_Gui_Bro = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local Chill_Gui_Bro = Instance.new("ScreenGui", game.Players.Doritosman2437.PlayerGui)
 local Header = Instance.new("Frame")
 local BackGround = Instance.new("Frame")
 local Chill_Gui_Label = Instance.new("TextLabel")
@@ -774,10 +776,10 @@ if tonumber(ID_Box.Text) then
 	Chillmusic.SoundId='rbxassetid://'..tonumber(ID_Box.Text)
 	Chillmusic:Play()
 	currentsong = game:GetService("MarketplaceService"):GetProductInfo(tonumber(ID_Box.Text)).Name
-	text.Text = "~»Chill Af«~ Now Playing: "..currentsong
+	text.Text = "~»Chill«~ Now Playing: "..currentsong
 	Current_Song_Label.Text = "~»Current Song: "..currentsong.."«~"
 wait(4)
-text.Text = "~»Fell Apart AF«~"
+text.Text = "~»Fell Apart«~"
 end
 end)
 local ischatting = false
@@ -802,12 +804,12 @@ if ischatting == false then
 ischatting = true
 Chat_Toggle_Label.Text = "~»True«~"
 spawn(function()
-game.Players.LocalPlayer.Chatted:connect(function(msg)
+game.Players.Doritosman2437.Chatted:connect(function(msg)
 for i = 0, msg:len(), 1 do
 	text.Text = "~»"..msg:sub(0, i).."«~"
 end
 wait(3)
-text.Text = "~»Fell Apart AF«~"
+text.Text = "~»Fell Apart«~"
 end)
 end)
 else
