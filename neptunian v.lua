@@ -1,14 +1,3 @@
---Created by NoobyGames12
-----------------------------]]
-
-print[[Set your theme by: 
-id/
-vol/
-pitch/
-You can skip through the position of theme by:
-skipto/]]
-
-warn("Have fun using this!")
 ---- DO NOT CHANGE ANYTHING BELOW IF YOU'RE NOT AN EDITOR 
 
 
