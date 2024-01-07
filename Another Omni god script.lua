@@ -1,5 +1,5 @@
 -- This script has been converted to FE by iPxter
-owner.Character.Humanoid.HipHeight = 1
+owner.Character.Humanoid.HipHeight = 2
 
 if game:GetService("RunService"):IsClient() then error("Script must be server-side in order to work; use h/ and not hl/") end
 local Player,Mouse,mouse,UserInputService,ContextActionService = owner
