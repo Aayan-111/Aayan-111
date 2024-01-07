@@ -386,7 +386,6 @@ function chatfunc(text, color)
 	end)
 	chat()
 end
-local Create = LoadLibrary("RbxUtility").Create
 CFuncs = {
 	Part = {
 		Create = function(Parent, Material, Reflectance, Transparency, BColor, Name, Size)
