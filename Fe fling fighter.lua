@@ -1150,40 +1150,12 @@ local la = char["Left Arm"]
 local rl = char["Right Leg"]
 local ll = char["Left Leg"]
 local neck = tors["Neck"]
-local mouse = plr:GetMouse()
 local RootCF = CFrame.fromEulerAnglesXYZ(-1.57, 0, 3.14)
 local RHCF = CFrame.fromEulerAnglesXYZ(0, 1.6, 0)
 local LHCF = CFrame.fromEulerAnglesXYZ(0, -1.6, 0)
 local maincolor = BrickColor.new("Institutional white")
 hum.MaxHealth = 200
 hum.Health = 200
- 
-local hrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
- 
-hrp.Name = "HumanoidRootPart"
-hrp.Transparency = 0.5
-hrp.Anchored = false
-if hrp:FindFirstChildOfClass("AlignPosition") then
-hrp:FindFirstChildOfClass("AlignPosition"):Destroy()
-end
-if hrp:FindFirstChildOfClass("AlignOrientation") then
-hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
-end
-local bp = Instance.new("BodyPosition", hrp)
-bp.Position = hrp.Position
-bp.D = 9999999
-bp.P = 999999999999999
-bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
-local flinger = Instance.new("BodyAngularVelocity",hrp)
-flinger.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
-flinger.P = 1000000000000000000000000000
-flinger.AngularVelocity = Vector3.new(10000,10000,10000)
- 
-spawn(function()
-while game:GetService("RunService").Heartbeat:Wait() do
-bp.Position = game:GetService("Players").LocalPlayer.Character["NullwareReanim"].Torso.Position
-end
-end)
  
 -------------------------------------------------------
 --Start Good Stuff--
