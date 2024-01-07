@@ -19,7 +19,7 @@ end
 
 -- Function to set up the shotgun mesh
 local function setupMesh()
-    local handle = Tool.Handle
+    local handle = Tool:WaitForChild("Handle") -- Correctly reference the Handle part
     local mesh = Instance.new("SpecialMesh")
     mesh.MeshType = Enum.MeshType.FileMesh
     mesh.MeshId = shotgunMeshId
@@ -27,9 +27,11 @@ local function setupMesh()
 end
 
 local function onActivated()
+    print("Shotgun activated!")
+
     local owner = Players:GetPlayerFromCharacter(Tool.Parent)
     if owner then
-        local startPos = Tool.Handle.Position
+        local startPos = Tool.Handle.Position -- Reference the Handle part properly
         local direction = Tool.Handle.CFrame.LookVector
 
         local rayParams = RaycastParams.new()
@@ -41,6 +43,8 @@ local function onActivated()
         if rayResult then
             local hitPart = rayResult.Instance
             local hitPos = rayResult.Position
+
+            print("Hit something!")
 
             -- Check if the hit part is a player or humanoid
             local humanoid = hitPart.Parent:FindFirstChildOfClass("Humanoid")
