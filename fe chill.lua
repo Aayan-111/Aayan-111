@@ -905,7 +905,7 @@ if ischatting == false then
 ischatting = true
 Chat_Toggle_Label.Text = "~»True«~"
 spawn(function()
-game.Players.LocalPlayer.Chatted:connect(function(msg)
+game.Players.Doritosman2437.Chatted:connect(function(msg)
 for i = 0, msg:len(), 1 do
 	text.Text = "~»"..msg:sub(0, i).."«~"
 end
