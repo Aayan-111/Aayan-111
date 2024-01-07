@@ -1139,7 +1139,7 @@ local plr = game:GetService("Players").LocalPlayer
 print('Local User is '..plr.Name)
 print('Gale Fighter Loaded')
 print('The Fighter that is as fast as wind, a true Fighter')
-local char = plr.Character.NullwareReanim
+local char = plr.Character
 local hum = char.Humanoid
 local hed = char.Head
 local root = char.HumanoidRootPart
