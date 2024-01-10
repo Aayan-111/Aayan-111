@@ -1,0 +1,21 @@
+local character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+
+local viewportFrame = Instance.new("ViewportFrame")
+viewportFrame.Size = UDim2.new(0.2, 0, 0.2, 0)
+viewportFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+viewportFrame.BackgroundTransparency = 0.5
+viewportFrame.BackgroundColor3 = Color3.new(1, 0, 0) 
+viewportFrame.CurrentCamera = game.Workspace.CurrentCamera
+
+
+local head = character:WaitForChild("Head")
+viewportFrame.Parent = head
+
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    local lookVector = humanoid.WalkToPoint - head.Position
+    local newCFrame = CFrame.new(head.Position, head.Position + Vector3.new(lookVector.X, 0, lookVector.Z))
+    viewportFrame.CurrentCamera.CFrame = newCFrame
+end)
