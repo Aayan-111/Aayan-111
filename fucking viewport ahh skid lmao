@@ -1,5 +1,5 @@
-local player = owner.Character
-local character = owner.Character or owner.CharacterAdded:Wait()
+local player = games.Player.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 local head = character:WaitForChild("Head")
 
