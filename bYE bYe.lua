@@ -1,7 +1,4 @@
 --TODO: add comments or something idk
--- Star Glitcher Fixed By Doritosman2437
---Ik this thing is old so shut up (star glitcher fan basically xd)
---do not leak it ok?
 if game:GetService("RunService"):IsClient() then error("Script must be server-side in order to work; use h/ and not hl/") end
 local Player = owner
 local Mouse,mouse,UserInputService,ContextActionService
@@ -126,7 +123,6 @@ C - Toned down the effects to be compatible with fe without strong lag.]])
 if game.PlaceId == 843468296 then
 	error("This script has been banned. You cannot use it here. Please use Place 2.")
 end
-plr = game:GetService("Players"):FindFirstChild(script.owner.Value)
 plr = owner
 char = plr.Character
 hum = char.Humanoid
@@ -282,12 +278,6 @@ CamShake=function(Part,Distan,Power,Times)
 	end
 end
 
-function CamShakeAll(times,intense,origin)
-	for _,v in next, Plrs:players() do
-		CamShake(v:FindFirstChildOfClass'PlayerGui' or v:FindFirstChildOfClass'Backpack' or v.Character,times,intense,origin)
-	end
-end
-
 local toggleTag = true
 local bilguit = Instance.new("BillboardGui", hed)
 bilguit.Adornee = nil
@@ -435,65 +425,6 @@ function bosschatfunc(text,color,watval)
 			coroutine.resume(coroutine.create(function()
 				while true do
 					swait()
-					if ModeOfGlitch == 666666 then
-						txtlb2.Text = modet.Text.."  U S E R :"
-						txtlb.Rotation = math.random(-2,2)
-						txtlb2.Rotation = math.random(-2,2)
-						txtlb.Position = txtlb.Position + UDim2.new(0,math.random(-2,2)/5,0,math.random(-2,2)/5)
-						txtlb2.Position = txtlb2.Position + UDim2.new(0,math.random(-2,2)/5,0,math.random(-2,2)/5)
-					end
-				end
-			end))
-			coroutine.resume(coroutine.create(function()
-				while true do
-					swait()
-					if Error == true then
-						txtlb2.Text = modet.Text..rai[math.random(1,12)]
-						txtlb.Rotation = math.random(-9,9)
-						txtlb2.Rotation = math.random(-9,9)
-						txtlb.Position = txtlb.Position + UDim2.new(0,math.random(-8,8)/5,0,math.random(-8,8)/5)
-						txtlb2.Position = txtlb2.Position + UDim2.new(0,math.random(-8,8)/5,0,math.random(-8,8)/5)
-						txtlb.TextStrokeColor3 = BrickColor.random().Color
-						txtlb2.TextStrokeColor3 = BrickColor.random().Color
-					end
-				end
-			end))
-			coroutine.resume(coroutine.create(function()
-				while true do
-					swait()
-					if unstablemode == true then
-						txtlb.TextStrokeColor3 = BrickColor.new(math.random(0,1),0,0).Color
-						txtlb2.TextStrokeColor3 = BrickColor.new(math.random(0,1),0,0).Color
-						txtlb.TextColor3 = BrickColor.new(1,1,1).Color
-						txtlb2.TextColor3 = BrickColor.new(1,1,1).Color
-						if math.random(1,10) == 1 then
-							txtlb.TextStrokeColor3 = BrickColor.new(0,0,0).Color
-							txtlb2.TextStrokeColor3 = BrickColor.new(0,0,0).Color
-							txtlb.TextColor3 = BrickColor.new(math.random(0,1),0,0).Color
-							txtlb2.TextColor3 = BrickColor.new(math.random(0,1),0,0).Color
-
-						end
-					end
-				end
-			end))
-			coroutine.resume(coroutine.create(function()
-				while true do
-					swait()
-					if CRAZED == true then
-						txtlb.Rotation = math.random(-4,4)
-						txtlb2.Rotation = math.random(-4,4)
-						txtlb.Position = txtlb.Position + UDim2.new(0,math.random(-1,1)/5,0,math.random(-1,1)/5)
-						txtlb2.Position = txtlb2.Position + UDim2.new(0,math.random(-1,1)/5,0,math.random(-1,1)/5)
-						txtlb.TextStrokeColor3 = BrickColor.new(0,0,math.random(0,1)).Color
-						txtlb.TextColor3 = BrickColor.new(0,0,math.random(0,1)).Color
-						txtlb2.TextStrokeColor3 = BrickColor.new(0,0,math.random(0,1)).Color
-						txtlb2.TextColor3 = BrickColor.new(0,0,math.random(0,1)).Color
-					end
-				end
-			end))
-			coroutine.resume(coroutine.create(function()
-				while true do
-					swait()
 					if chaosmode == true then
 						txtlb.Rotation = math.random(-1,1)
 						txtlb2.Rotation = math.random(-1,1)
@@ -550,7 +481,7 @@ function bosschatfunc(text,color,watval)
 	end
 end
 
-local LoadLibrary=require(4676947833) --Doritosman2437's LoadLibrary
+local LoadLibrary=require(4676947833)
 local Create = LoadLibrary("RbxUtility").Create
 
 CFuncs = {	
